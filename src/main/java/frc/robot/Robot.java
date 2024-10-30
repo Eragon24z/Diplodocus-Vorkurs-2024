@@ -4,9 +4,12 @@
 
 package frc.robot;
 
+import edu.wpi.first.util.sendable.Sendable;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import frc.robot.commands.DriveCommand;
 import frc.robot.subsystems.Drive;
 
 /**
@@ -28,6 +31,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     Drive drive = Drive.getInstance();
     m_robotContainer = new RobotContainer();
+    Shuffleboard.getTab("Joystick").add(Drive.getInstance().getDefaultCommand());
   }
 
   /**

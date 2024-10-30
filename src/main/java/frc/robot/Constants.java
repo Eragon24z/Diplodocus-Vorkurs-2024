@@ -26,6 +26,8 @@ public final class Constants {
 
     public static class Joystick{
       public static final int PORT = 0;
+      public static final double DeadzoneDefault = 0.05;
+      public static final double SensitivityDefault = 1;
     }
 
   }
